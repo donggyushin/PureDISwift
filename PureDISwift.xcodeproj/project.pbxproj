@@ -16,6 +16,7 @@
 		7005CCFA25B69CDD00DF6C93 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7005CCF925B69CDD00DF6C93 /* FirstViewController.swift */; };
 		7005CD0225B69DD900DF6C93 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7005CD0125B69DD900DF6C93 /* SecondViewController.swift */; };
 		7005CD0725B69E0600DF6C93 /* StringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7005CD0625B69E0600DF6C93 /* StringGenerator.swift */; };
+		7005CD0C25B6A46300DF6C93 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7005CD0B25B6A46300DF6C93 /* AppDependency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7005CCF925B69CDD00DF6C93 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		7005CD0125B69DD900DF6C93 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7005CD0625B69E0600DF6C93 /* StringGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringGenerator.swift; sourceTree = "<group>"; };
+		7005CD0B25B6A46300DF6C93 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				7005CCD125B69C9F00DF6C93 /* Info.plist */,
 				7005CD0125B69DD900DF6C93 /* SecondViewController.swift */,
 				7005CD0625B69E0600DF6C93 /* StringGenerator.swift */,
+				7005CD0B25B6A46300DF6C93 /* AppDependency.swift */,
 			);
 			path = PureDISwift;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7005CD0C25B6A46300DF6C93 /* AppDependency.swift in Sources */,
 				7005CD0725B69E0600DF6C93 /* StringGenerator.swift in Sources */,
 				7005CD0225B69DD900DF6C93 /* SecondViewController.swift in Sources */,
 				7005CCFA25B69CDD00DF6C93 /* FirstViewController.swift in Sources */,

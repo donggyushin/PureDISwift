@@ -10,7 +10,9 @@ import UIKit
 class FirstViewController: UIViewController {
     
     // MARK: Properties
-    private let stringGenerator:StringGenerator = StringGenerator()
+    
+    private let stringGenerator:StringGeneratorProtocol
+    private let secondViewDependency: SecondViewController.Dependency
     
     private lazy var stringLabel:UILabel = {
         let label = UILabel()
@@ -25,6 +27,16 @@ class FirstViewController: UIViewController {
     }()
 
     // MARK: Lifecycles
+    init(generator:StringGeneratorProtocol, secondViewDependency: SecondViewController.Dependency) {
+        self.stringGenerator = generator
+        self.secondViewDependency = secondViewDependency
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,7 +65,8 @@ class FirstViewController: UIViewController {
     }
     
     func presentSecondViewController() {
-        let secondView = SecondViewController()
+        
+        let secondView = SecondViewController(generator: secondViewDependency.generator())
         self.present(secondView, animated: true, completion: nil)
     }
     

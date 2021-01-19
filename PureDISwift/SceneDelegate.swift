@@ -10,13 +10,21 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    // 델리게이트의 의존성을 받습니다.
+    let appDependency: AppDependency = .resolve()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: scene)
-        self.window?.rootViewController = FirstViewController()
+        
+        // 앱 디펜던시에 있는 퍼스트뷰컨의 의존성을 받아서 생성자 주입을 해줍니다.
+        let firstViewDependency = appDependency.firstViewControllerDependency
+        let firstViewController = FirstViewController(generator: firstViewDependency.generator(), secondViewDependency: firstViewDependency.secondViewControllerDependency
+        )
+        self.window?.rootViewController = firstViewController
         self.window?.makeKeyAndVisible()
     }
 
